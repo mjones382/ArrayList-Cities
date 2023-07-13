@@ -1,0 +1,54 @@
+
+import java.util.ArrayList;
+/**
+ * @author mjones382
+ * This is a demo of a simple program implementing ArrayList
+ *
+ */
+public class ArrayListTest {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		//Creating list to store cities
+		ArrayList<String> ListOfCities = new ArrayList<>();
+		
+		//Adding cities to list
+		ListOfCities.add("Chicago");
+		ListOfCities.add("New York");
+		ListOfCities.add("Amsterdam");
+		ListOfCities.add("Shanghai");
+		ListOfCities.add("Sydney");
+		ListOfCities.add("Tokyo");
+		ListOfCities.add("Miami");
+		
+		System.out.println("What is the current size of the list? " + ListOfCities.size());
+		
+		System.out.println("Is Chicago on the list? " + ListOfCities.contains("Chicago"));
+		
+		System.out.println(" Is this list empty? " + ListOfCities.isEmpty());
+		
+		System.out.println(ListOfCities.toString());
+		 
+		//Inserting new city into index 4
+		ListOfCities.add(4, "Bogota"); 
+		
+		//Removing city
+		ListOfCities.remove("Miami");
+		
+		//Remove city at index 1
+		ListOfCities.remove(1);
+		
+		System.out.println(ListOfCities.toString());
+		
+		//Display list in reverse order
+		for (int i = ListOfCities.size() -1; i >= 0; i--)
+			System.out.println(ListOfCities.get(i) + "");
+       System.out.println();
+		
+
+	}
+
+}
